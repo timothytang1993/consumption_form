@@ -81,10 +81,10 @@ document.getElementById("submit").addEventListener("click", function (event) {
         }else{
             netTotal += total;
         }
-
-        let payback = netTotal / 2;
-        
     }
+
+    let payback = netTotal / 2;
+
     document.getElementById("msg").innerText += `Net Total: ${netTotal} \nPay Back: ${payback} = ${netTotal} / 2`
 });
 
