@@ -83,6 +83,6 @@ document.getElementById("submit").addEventListener("click", function (event) {
         }
         
     }
-    document.getElementById("msg").innerText += `NetTotal: ${netTotal}`
+    document.getElementById("msg").innerText += `Net Total: ${netTotal} \nPay Back: ${netTotal}/2`
 });
 
