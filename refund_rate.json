@@ -1,0 +1,20 @@
+[
+    {
+        "chineseName": "微信安信",
+        "rate": 0.98,
+        "unionPay": false,
+        "otherPersonPay": false
+    },
+    {
+        "chineseName": "雲閃付中銀鑽石卡",
+        "rate": 0.96,
+        "unionPay": true,
+        "otherPersonPay": false
+    },
+    {
+        "chineseName": "Jannel內地支付寶",
+        "rate": 1,
+        "unionPay": true,
+        "otherPersonPay": true
+    }
+]

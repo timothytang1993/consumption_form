@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timothy Payment in Mainland China</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="login-box">
-        <h2>Login</h2>
+        <h2>Timothy Payment in Mainland China</h2>
         <form id="form">
             <div id="form-content">
-                <div class="user-box" id="input-1">
-                    <input type="number" name="amount-1" required="">
-                        <select name="payment-1">
-                            <option value="wechat-prime-credit">微信安信</option>
-                            <option value="union-bank-of-china">雲閃付中銀</option>
-                        </select>
-                    <label>amount-1</label>
-                  </div>
+                <div class="user-box" id="input-0">
+                    <input type="number" name="union-rate" min="0.0001" required="">
+                    <label>union-rate</label>
+                </div>
             </div>
-          <button id="add-1">add-1</button>
-          <button id="delete-1">delete-1</button>
-          <input type="date" id="union-rate-date" name="union-rate-date" value="2018-07-22" />
-
+          <button id="add">add</button>
+          <button id="delete">delete</button>
           <a href="#" id="submit">
             <span></span>
             <span></span>
@@ -31,7 +25,12 @@
             <span></span>
             Submit
           </a>
+          <div id="msg"></div>
         </form>
+        <div>
+            Reference: <br>
+            <a href="https://www.unionpayintl.com/hk/rate/">unionpay rate</a>
+        </div>
       </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
