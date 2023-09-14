@@ -68,6 +68,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
     let unionRateValue = document.querySelector("input[name='union-rate']").value;
     console.log("union-rate Value:", unionRateValue);
 
+    let totalAmout = 0;
     let netTotal = 0;
     for (let i = 1; i < inputDOM; i++) {
         let numberOfInput = i;
@@ -83,14 +84,16 @@ document.getElementById("submit").addEventListener("click", function (event) {
         document.getElementById("msg").innerText += `Payment-${numberOfInput}: ${total} = ${document.querySelector(`input[name='amount-${numberOfInput}']`).value} * ${jsonData[document.querySelector(`select[name='payment-${numberOfInput}']`).value]["rate"]} ${textUnion}\n`
         
         if(jsonData[document.querySelector(`select[name='payment-${numberOfInput}']`).value]["otherPersonPay"]){
-            netTotal -= total;
+            totalAmout += total;
+            netTotal -= total;        
         }else{
+            totalAmout += total;
             netTotal += total;
         }
     }
 
     let payback = netTotal / 2;
 
-    document.getElementById("msg").innerText += `Net Total: ${netTotal} \nPay Back: ${payback} = ${netTotal} / 2`
+    document.getElementById("msg").innerText += `Total Amount: ${totalAmout} \n Net Total: ${netTotal} \nPay Back: ${payback} = ${netTotal} / 2`
 });
 
