@@ -3,18 +3,35 @@
         "chineseName": "微信安信",
         "rate": 0.98,
         "unionPay": false,
-        "otherPersonPay": false
+        "otherPersonPay": false,
+        "enable": true
+    },
+    {
+        "chineseName": "雲閃付安信銀聯鑽石卡2023-12-31",
+        "rate": 0.93,
+        "unionPay": false,
+        "otherPersonPay": false,
+        "enable": true
     },
     {
         "chineseName": "雲閃付中銀鑽石卡",
         "rate": 0.96,
         "unionPay": true,
-        "otherPersonPay": false
+        "otherPersonPay": false,
+        "enable": false
+    },
+    {
+        "chineseName": "LiviPaylaterTrip2023-09-30ShopBack住宅",
+        "rate": 0.875,
+        "unionPay": false,
+        "otherPersonPay": false,
+        "enable": true
     },
     {
         "chineseName": "Jannel內地支付寶",
         "rate": 1,
         "unionPay": true,
-        "otherPersonPay": true
+        "otherPersonPay": true,
+        "enable": true
     }
 ]

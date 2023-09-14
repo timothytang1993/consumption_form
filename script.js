@@ -21,6 +21,7 @@ document.getElementById("add").onclick = function () {
     let inputElement = document.createElement("input");
     inputElement.type = "number";
     inputElement.name = `amount-${inputDOM}`;
+    inputElement.step = 0.01
     inputElement.required = true;
 
     let selectElement = document.createElement("select");
@@ -28,6 +29,9 @@ document.getElementById("add").onclick = function () {
     selectElement.id = `payment-${inputDOM}`;
     // Generate options based on the JSON data
     for (let i = 0; i < jsonData.length; i++) {
+        if(jsonData[i].enable == false){
+            continue;
+        }
         option = document.createElement("option");
         option.value = i;
         option.text = jsonData[i].chineseName + " - " + jsonData[i].rate;
@@ -54,6 +58,8 @@ document.getElementById("delete").onclick = function () {
     inputDOM--;
 };
 
+
+//Calculation
 document.getElementById("submit").addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default link click behavior
 
