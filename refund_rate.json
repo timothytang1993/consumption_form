@@ -18,7 +18,7 @@
         "rate": 0.96,
         "unionPay": true,
         "otherPersonPay": false,
-        "enable": false
+        "enable": true
     },
     {
         "chineseName": "LiviPaylaterTrip2023-09-30ShopBack住宅",
