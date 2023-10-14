@@ -4,34 +4,47 @@
         "rate": 0.98,
         "unionPay": false,
         "otherPersonPay": false,
-        "enable": true
+        "enable": true,
+        "remark": "安信基本2%回贈"
     },
     {
         "chineseName": "雲閃付安信銀聯鑽石卡2023-12-31",
         "rate": 0.93,
         "unionPay": false,
         "otherPersonPay": false,
-        "enable": true
+        "enable": true,
+        "remark": "安信基本2%回贈，內地消費特選5%"
     },
     {
         "chineseName": "雲閃付中銀鑽石卡",
         "rate": 0.96,
         "unionPay": true,
         "otherPersonPay": false,
-        "enable": true
+        "enable": true,
+        "remark": "每月最高100蚊回贈"
     },
     {
         "chineseName": "LiviPaylaterTrip2023-09-30ShopBack住宅",
         "rate": 0.875,
         "unionPay": false,
         "otherPersonPay": false,
-        "enable": true
+        "enable": false,
+        "remark": "liviPayLater已無trip優惠"
+    },
+    {
+        "chineseName": "恒生MMPOWERMasterCardShopBackTrip",
+        "rate": 0.90725,
+        "unionPay": false,
+        "otherPersonPay": false,
+        "enable": true,
+        "remark": "恒生線上消費5%回贈，shopBack最高4.5%"
     },
     {
         "chineseName": "Jannel內地支付寶",
         "rate": 1,
         "unionPay": true,
         "otherPersonPay": true,
-        "enable": true
+        "enable": true,
+        "remark": "無內地戶口"
     }
 ]
