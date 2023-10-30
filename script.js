@@ -1,5 +1,8 @@
 var inputDOM = 1;
 var jsonData = [];
+const params = new URLSearchParams(window.location.search);
+const phone = params.get('phone');
+var htmlMsg = null;
 window.onload = function () {
     fetch("refund_rate.json")
         .then(response => response.json())
@@ -63,7 +66,7 @@ document.getElementById("delete").onclick = function () {
 document.getElementById("submit").addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default link click behavior
 
-    document.getElementById("msg").innerText = '';
+    let msg = '';
 
     let unionRateValue = document.querySelector("input[name='union-rate']").value;
     console.log("union-rate Value:", unionRateValue);
@@ -81,7 +84,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
             total = total * unionRateValue;
         }
 
-        document.getElementById("msg").innerText += `Payment-${numberOfInput}: ${total} = ${document.querySelector(`input[name='amount-${numberOfInput}']`).value} * ${jsonData[document.querySelector(`select[name='payment-${numberOfInput}']`).value]["rate"]} ${textUnion}\n`
+        msg += `Payment-${numberOfInput}: ${total} = ${document.querySelector(`input[name='amount-${numberOfInput}']`).value} * ${jsonData[document.querySelector(`select[name='payment-${numberOfInput}']`).value]["rate"]} ${textUnion}%0A`
         
         if(jsonData[document.querySelector(`select[name='payment-${numberOfInput}']`).value]["otherPersonPay"]){
             totalAmout += total;
@@ -94,6 +97,28 @@ document.getElementById("submit").addEventListener("click", function (event) {
 
     let payback = netTotal / 2;
 
-    document.getElementById("msg").innerText += `Total Amount: ${totalAmout} \n Net Total: ${netTotal} \nPay Back: ${payback} = ${netTotal} / 2`
+    msg += `Total Amount: ${totalAmout} %0A Net Total: ${netTotal} %0A Pay Back: ${payback} = ${netTotal} / 2`;
+    
+    //chnage %0A for new line in HTML
+    document.getElementById("msg").innerText += msg.replace(/%0A/g, '\n')
+
+    //send message to button as value in order to share whatsapp
+    createShareWhatsappButton(msg);
 });
 
+document.getElementById("share-button").addEventListener("click", function (event) {
+    window.location.href = `https://wa.me/${phone}?text=${document.getElementById("share-whatsapp").value}`
+});
+
+function createShareWhatsappButton(msg) {
+    let buttonElement = document.createElement("button");
+    buttonElement.type = "button";
+    buttonElement.id = "share-whatsapp";
+    buttonElement.value = msg;
+    let whatsappIcon = document.createElement("i");
+    whatsappIcon.className = "fa fa-whatsapp";
+    let textNode = document.createTextNode("share-whatsapp");
+    buttonElement.appendChild(whatsappIcon);
+    buttonElement.appendChild(textNode);
+    document.getElementById("share-button").appendChild(buttonElement);
+}
