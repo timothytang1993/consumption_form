@@ -65,7 +65,7 @@ document.getElementById("delete").onclick = function () {
 //Calculation
 document.getElementById("submit").addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default link click behavior
-    document.getElementById("msg").innerText = '';
+
     let msg = '';
 
     let unionRateValue = document.querySelector("input[name='union-rate']").value;
