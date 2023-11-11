@@ -8,7 +8,7 @@
         "remark": "安信基本2%回贈"
     },
     {
-        "chineseName": "雲閃付安信銀聯鑽石卡2023-12-31",
+        "chineseName": "雲閃付安信鑽石20231231",
         "rate": 0.93,
         "unionPay": false,
         "otherPersonPay": false,
@@ -32,7 +32,7 @@
         "remark": "liviPayLater已無trip優惠"
     },
     {
-        "chineseName": "恒生MMPOWERMasterCardShopBackTrip",
+        "chineseName": "恒生MMShopBackTrip",
         "rate": 0.90725,
         "unionPay": false,
         "otherPersonPay": false,
