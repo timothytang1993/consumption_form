@@ -41,34 +41,30 @@ document.getElementById("add").onclick = function () {
         selectElement.appendChild(option);
     }
 
-    let divElement = document.createElement("div");
-    divElement.className ='label';
-    divElement.textContent = `payment-${inputDOM}`;
+    let labelElement = document.createElement("label");
+    labelElement.textContent = `payment-${inputDOM}`;
 
     userBox.appendChild(inputElement);
 
     userBox.appendChild(selectElement);
-    userBox.appendChild(divElement);
+    userBox.appendChild(labelElement);
 
     document.getElementById("form-content").appendChild(userBox);
     inputDOM++;
 };
 
-document.getElementById("delete").addEventListener("click", function (event) {
+document.getElementById("delete").onclick = function () {
     var elementToDelete = document.getElementById(`input-${inputDOM - 1}`);
-    if (elementToDelete != null) {
+    if (elementToDelete) {
         elementToDelete.parentNode.removeChild(elementToDelete);
-        inputDOM--;
     }
-});
+    inputDOM--;
+};
 
 
 //Calculation
 document.getElementById("submit").addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default link click behavior
-
-    removeShareWhatsappButton();
-
     document.getElementById("msg").innerText = '';
     let msg = '';
 
@@ -108,11 +104,6 @@ document.getElementById("submit").addEventListener("click", function (event) {
 
     //send message to button as value in order to share whatsapp
     createShareWhatsappButton(msg);
-
-    function removeShareWhatsappButton() {
-        if (document.getElementById("share-whatsapp") != null)
-            document.getElementById("share-whatsapp").remove();
-    }
 });
 
 document.getElementById("share-button").addEventListener("click", function (event) {
