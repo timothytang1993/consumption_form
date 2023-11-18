@@ -95,7 +95,7 @@ body {
   outline: none;
   background: transparent;
 }
-.login-box .user-box label {
+.login-box .user-box div.label {
   position: absolute;
   top: -20px;
   left: 0;
