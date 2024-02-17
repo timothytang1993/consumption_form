@@ -24,6 +24,14 @@
         "remark": "每月最高100蚊回贈"
     },
     {
+        "chineseName": "雲閃付中銀鑽石卡TripShopBack4.5%",
+        "rate": 0.915,
+        "unionPay": true,
+        "otherPersonPay": false,
+        "enable": true,
+        "remark": "每月最高100蚊回贈"
+    },
+    {
         "chineseName": "LiviPaylaterTrip2023-09-30ShopBack住宅",
         "rate": 0.875,
         "unionPay": false,
@@ -36,7 +44,7 @@
         "rate": 0.90725,
         "unionPay": false,
         "otherPersonPay": false,
-        "enable": true,
+        "enable": false,
         "remark": "恒生線上消費5%回贈，shopBack最高4.5%"
     },
     {
