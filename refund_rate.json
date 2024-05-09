@@ -1,4 +1,12 @@
-[
+[    
+    {
+    "chineseName": "微信大新五六日10%回贈(每月上限50，每次支出最少100)",
+    "rate": 0.9,
+    "unionPay": false,
+    "otherPersonPay": false,
+    "enable": true,
+    "remark": "微信大新五六日10%回贈"
+    },
     {
         "chineseName": "微信安信",
         "rate": 0.98,
