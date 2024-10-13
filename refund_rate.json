@@ -36,7 +36,7 @@
         "rate": 0.96,
         "unionPay": true,
         "otherPersonPay": false,
-        "enable": false,
+        "enable": true,
         "remark": "每月最高100蚊回贈"
     },
     {
