@@ -32,6 +32,14 @@
         "remark": "安信基本2%回贈，內地消費特選5%"
     },
     {
+        "chineseName": "雲閃付安信鑽石20241231",
+        "rate": 0.9,
+        "unionPay": false,
+        "otherPersonPay": false,
+        "enable": false,
+        "remark": "安信基本2%回贈，內地消費特選8%"
+    },
+    {
         "chineseName": "雲閃付中銀鑽石卡",
         "rate": 0.96,
         "unionPay": true,
